@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Disciplinas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/system.js"></script>
+    <script>
+        System.defaultJSExtensions = true;
+        System.import('js/Index.js').catch(err => console.error(err));
+    </script>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <Center>
+            <h1>Disciplinas</h1>
+        </Center>
+
+        <div class="row col-12">
+            <div class="input-group mb-3 col-12">
+                <input required id="id" type="text" class="form-control" placeholder="Código da Disciplina"
+                    aria-label="Código da Disciplina" aria-describedby="basic-addon1">
+            </div>
+
+            <div class="input-group mb-3 col-12">
+                <input required id="Descricao" type="text" class="form-control" placeholder="Descrição"
+                    aria-label="Descrição" aria-describedby="basic-addon1">
+            </div>
+
+            <div class="input-group mb-3 col-12">
+                <input required id="DataInicio" type="date" class="form-control" placeholder="Data de Início"
+                    aria-label="Data de Início" aria-describedby="basic-addon1">
+            </div>
+
+            <div class="input-group mb-3 col-12">
+                <input required id="ValorDisciplina" type="number" class="form-control" placeholder="Valor Disciplina"
+                    aria-label="Valor Disciplina" aria-describedby="basic-addon1">
+            </div>
+
+            <div class="mb-3 col-12">
+                <select id="Optativa" class="form-control" aria-label="Optativa (Sim/Não)">
+                    <option selected>Optativa (Sim/Não)</option>
+                    <option value="1">Sim</option>
+                    <option value="2">Não</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row col-12">
+            <div class="input-group mb-3 col-6">
+                <button type="button" class="btn btn-primary btn-lg btn-block" id="BotaoImportar">Importar</button>
+            </div>
+            <div class="input-group mb-3 col-6">
+                <button type="button" class="btn btn-primary btn-lg btn-block" id="BotaoConsultar">Consultar</button>
+            </div>
+            <div class="input-group mb-3 col-4">
+                <button type="button" class="btn btn-success btn-lg btn-block" id="BotaoIncluir">Incluir</button>
+            </div>
+            <div class="input-group mb-3 col-4">
+                <button type="button" class="btn btn-primary btn-lg btn-block" id="BotaoAlterar">Alterar</button>
+            </div>
+            <div class="input-group mb-3 col-4">
+                <button type="button" class="btn btn-danger btn-lg btn-block" id="BotaoExcluir">Excluir</button>
+            </div>
+        </div>
+
+        <br>
+        <br>
+
+        <div class="row col-12">
+            <table class="table table-striped">
+                <tr>
+                    <th scope="col">Código da Disciplina</th>
+                    <th scope="col">Descrição</th>
+                    <th scope="col">Data de Início</th>
+                    <th scope="col">Valor da Disciplina (R$)</th>
+                    <th scope="col">Optativa (Sim/Não)</th>
+                </tr>
+
+                <tbody id="Resultados">
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

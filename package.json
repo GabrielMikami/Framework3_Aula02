@@ -1,0 +1,23 @@
+{
+  "name": "pratica",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@types/jquery": "^3.5.5",
+    "concurrently": "^6.0.0",
+    "express": "^4.17.1",
+    "json-server": "^0.16.3",
+    "lite-server": "^2.6.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "tsc",
+    "watch": "tsc -w",
+    "server": "concurrently \"json-server --watch ./app/db/Disciplinas.json --port 8081 \" \"lite-server --baseDir=app\"",
+    "start": "concurrently \"npm run watch\" \"npm run server\""
+  },
+  "author": "",
+  "license": "ISC"
+}

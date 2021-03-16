@@ -1,0 +1,18 @@
+{
+  "Disciplinas": [
+    {
+      "id": 1,
+      "Descricao": "tset",
+      "DataInicio": "2021-03-16",
+      "ValorDisciplina": 1090,
+      "Optativa": false
+    },
+    {
+      "id": 2,
+      "Descricao": "teststsets",
+      "DataInicio": "2021-03-16",
+      "ValorDisciplina": 100,
+      "Optativa": true
+    }
+  ]
+}
